@@ -1,3 +1,7 @@
+// AddNode at Front Time Complexity O(1)
+//Add Node at the End Time Comlexity O(1)
+//Add node at given position Time Complexity O(n)
+
 package main
 
 import (
