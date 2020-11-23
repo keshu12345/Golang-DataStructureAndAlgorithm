@@ -1,6 +1,10 @@
+//githu.com/keshu12345/Golang-DataStructureAndAlgorithm
 // AddNode at Front Time Complexity O(1)
 //Add Node at the End Time Comlexity O(1)
 //Add node at given position Time Complexity O(n)
+//Remove Node from Front Time COmlexity O(1)
+//Remove Node at End Time COmlexity O(1)
+//All cases Space Comlexity O(1)
 
 package main
 
@@ -68,6 +72,17 @@ func (l *LinkedList) addAnyPosition(newNode *Node, pos int) {
 	l.length++
 
 }
+func (l *LinkedList) removeFromFront() {
+	l.head = l.head.next
+	l.head.prev.next = nil
+	l.head.prev = nil
+}
+
+func (l *LinkedList) removeAtEnd() {
+	l.tail = l.tail.prev
+	l.tail.next.prev = nil
+	l.tail.next = nil
+}
 func (l *LinkedList) PrintDublyLinkedList() {
 	l.temp = l.head
 	if l.head == nil {
@@ -112,6 +127,8 @@ func main() {
 	linkedList.addAtFront(node5)
 	linkedList.addAttheEnd(node6)
 	linkedList.addAnyPosition(node7, pos)
+	linkedList.removeFromFront()
+	linkedList.removeAtEnd()
 	linkedList.PrintDublyLinkedList()
 	linkedList.PrintReverseDoublyLinkedList()
 }
