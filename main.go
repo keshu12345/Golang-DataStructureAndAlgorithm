@@ -16,7 +16,6 @@ func main() {
 	var n int
 	fmt.Scan(&n)
 	arr := set(n)
-	fmt.Println(arr)
 	fmt.Println(minMoves(arr, len(arr)))
 }
 func minMoves(arr []int, n int) int {
