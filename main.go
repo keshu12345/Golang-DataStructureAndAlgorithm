@@ -25,6 +25,7 @@ func minMoves(arr []int, n int) int {
 
 		if arr[i] == expectedItem {
 			expectedItem--
+
 		}
 
 	}

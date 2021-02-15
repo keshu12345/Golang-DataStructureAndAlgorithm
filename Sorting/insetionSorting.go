@@ -1,3 +1,6 @@
+// TC O(n^2)
+//SC O(n)
+
 package main
 
 import (
